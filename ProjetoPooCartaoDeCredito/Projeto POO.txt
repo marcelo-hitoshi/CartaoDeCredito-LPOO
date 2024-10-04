@@ -1,0 +1,17 @@
+﻿Projeto POO
+                                                
+Desenvolvido por: Marcelo Hitoshi Kondo Oya e Kenzo Ribeiro Toda
+                                                
+CONCEITO DO PROJETO
+                                                
+O conceito do projeto é oferecer ao usuário um controle detalhado dos gastos do cartão de crédito de forma mensal. Inicialmente, o sistema solicitará o limite do cartão por meio de um campo de JTextField onde o usuário insere o valor, e um JButton para confirmar a entrada. Se o valor for válido, o sistema avança para a próxima janela. Na janela seguinte, o usuário poderá adicionar despesas categorizadas por setores, utilizando um campo de seleção (JComboBox) para escolher a categoria, dois JTextFields para inserir o nome do produto e o valor da despesa, e três JButtons: um para adicionar a despesa, outro para exibir o resumo da fatura, e um terceiro para gerar um gráfico de pizza mostrando a distribuição dos gastos. O JButton para exibir o resumo da fatura abre uma nova janela mostrando os gastos adicionados, incluindo a despesa, o setor, e o seu valor. O JButton para exibir o gráfico abre uma nova janela disponibilizando um gráfico de pizza mostrando a distribuição dos gastos informando a concentração dos gastos em cada setor, e suas porcentagens.
+                                                
+CONCEITOS DE ORIENTAÇÃO À OBJETOS PRESENTE NESSE PROJETO
+                                                
+Herança - A classe ModeloJanela.java define uma estrutura básica para todas as janelas do projeto. Essa classe possui um construtor que define as configurações básicas de uma janela e que recebe como parâmetros o título da pagina e seu tamanho (largura e altura). Ela também possui um método abstrato (inicializarComponentes( ) ) para obrigar as suas subclasses a implementar a inicialização dos componentes da página. As classes Interface.java e GraficoPizza.java herdam a classe Modelo.java
+                                                
+Polimorfismo - A classe abstrata ModeloJanela define o método inicializarComponentes(), e suas subclasses o implementam de maneira específica para atender às suas necessidades (ex.: a GraficoPizza inicializa componentes de um gráfico, enquanto a Interface inicializa os elementos da interface principal). O polimorfismo é encontrado também quando utilizamos o ActionListener / ActionPerformed na classe Interface.java, eles permitem que diferentes classes ou instancias implementem o mesmo método com comportamentos variados. A sobrescrita do método tooString tambem se encaixa no conceito de polimorfismo, essa sobrescrita é feita na classe Compra.java
+                                                                                
+Encapsulamento - Todos os atributos desse projeto são privados, garantindo que eles não sejam acessados ou modificados diretamente de fora da classe
+                                                
+Abstração - Cada classe é responsável por um aspecto específico da aplicação, como representar uma compra (Compra.java), gerar um gráfico (GraficoPizza.java), ou gerir a interface principal (Interface.java), simplificando a compreensão e manutenção do código.
